@@ -1,0 +1,70 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Franklin Gothic';
+    background-color: #f0f0f0;
+}
+
+
+.images-container img {
+    width: 400px; /* Increased width */
+    height: 300px; /* Height calculated to maintain a 16:9 aspect ratio */
+    object-fit: cover; /* Ensures images cover the area without breaking aspect ratios */
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 300px; /* Same as the image width */
+    height: 168.75px; /* Same as the image height */
+}
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.hover-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for the hover effect */
+    pointer-events: none; /* Prevents the text from being selectable and blocking image clicks */
+}
+
+.image-wrapper:hover .hover-text {
+    opacity: 1;
+}
+

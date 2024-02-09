@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Guided Hike Price Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<p>Ready to embark on your hiking journey but unsure where to begin? Tell us how many miles you're interested in hiking, and we'll provide you with a personalized quote for a guided hike tailored just for you! Our expert guides are here to ensure you have an unforgettable experience, regardless of your skill level.</p>
+<br />
+<form id="hikePriceForm">
+    <label for="milesInput">Enter the number of miles you'd like to hike:</label>
+    <br />
+    <input type="number" id="milesInput" name="miles" min="1" step="1" required style="width: 50px">
+    <br />
+    <br />
+    <label for="chargePerHour">Charge per hour ($):</label>
+    <br />
+    <input type="text" id="chargePerHour" name="chargePerHour" value="50" readonly style="width: 50px">
+    <br />
+    <br />
+    <!-- Placeholder for price result, hidden by default -->
+    <div id="priceResult">
+        <label for="totalPrice">Estimated Total Price ($):</label>
+        <br />
+        <input type="text" id="totalPrice" name="totalPrice" readonly style="width: 100px">
+        <br />
+        <br />
+    </div>
+
+    <input type="button" value="Calculate Price" id="btnSubmit" />
+</form>
+<script src="\lib\jquery\dist\jquery.min.js"></script>
